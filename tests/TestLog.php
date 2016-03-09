@@ -3,12 +3,12 @@
 require '../vendor/autoload.php';
 
 // Namespace
-use HyanCat\LightLog\Adapters\FileHandler as LogFileHandler;
+use HyanCat\LightLog\Adapters\PrintHandler as PrintHandler;
 use HyanCat\LightLog\LightLog as LLog;
 
 // Instance
-$llog = new LLog(new LogFileHandler('logs/test.log'));
-$llog->app('your_app_name'); // optional
+$llog = new LLog(new PrintHandler());
+$llog->app('TestApp');
 
 // Write log
 $llog->info("it's ok!");

@@ -30,7 +30,7 @@ $llog->debug("dump array value", $anArray);
 
 ```
 
-Here it will write some logs append to file, which looks like this: (copied from test case)
+Here it will write some logs into file, which looks like this: (copied from test case)
 
 ```log
 [your_app_name] [INFO] TestLog.php:14 - it's ok! []
