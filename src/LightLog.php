@@ -65,6 +65,6 @@ class LightLog
             $callInfo   = $lastCaller['file'] . ':' . $lastCaller['line'];
         }
 
-        $this->handler->write($this->appName, $level, basename($callInfo) . ' - ' . $message . ' - ' . json_encode($context));
+        $this->handler->write($this->appName, $level, basename($callInfo) . ' - ' . $message, $context);
     }
 }
