@@ -1,6 +1,6 @@
 {
     "name": "hyancat/light-log",
-    "description": "A Light and Simple Log for Light Applications",
+    "description": "A Light and Simple Logger for Light Applications",
     "license": "MIT",
     "authors": [
         {

@@ -2,13 +2,18 @@
 
 require '../vendor/autoload.php';
 
-assert(class_exists(HyanCat\LightLog\LightLog::class));
+// Namespace
+use HyanCat\LightLog\Adapters\FileHandler as LogFileHandler;
+use HyanCat\LightLog\LightLog as LLog;
 
-$llog = new HyanCat\LightLog\LightLog(new HyanCat\LightLog\Adapters\PrintHandler());
+// Instance
+$llog = new LLog(new LogFileHandler('logs/test.log'));
+$llog->app('your_app_name'); // optional
 
-assert($llog instanceof HyanCat\LightLog\LightLog);
+// Write log
+$llog->info("it's ok!");
 
-$llog->app('LogTestingApp');
+$anArray = ['a' => 'b', 'c' => 'd'];
+$llog->debug("dump array value", $anArray);
 
-$llog->info('hello');
-$llog->debug('world', ['a' => 'b', 'c' => 'd']);
+// Or notice, warning, error...
